@@ -1,11 +1,11 @@
-import { Typography, Button } from '@mui/material';
+import { Typography, Button, Box } from '@mui/material';
+import Header from './components/header/Header';
 
 export default function Home() {
   console.log('Home')
   return (
-    <main>
-      <Typography variant="h1"color="primary.light" >Hello World</Typography>
-      <Button variant="container" >Hello World</Button>
-    </main>
+    <Box as={"main"}>
+      <Header />
+    </Box>
   )
 }
