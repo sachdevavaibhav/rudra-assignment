@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
-import CustomButton from '../button/CustomButton';
+import CustomButton from '../customButton/CustomButton';
 
 import { homeData, pagesData, elementsData } from './data';
 
@@ -64,6 +64,7 @@ function RenderSidebarContent({heading, dataArr}) {
 
 
 function SidebarContent() {
+    console.log("sidebar content");
     return (
         <Box marginTop="1rem">
             <RenderSidebarContent heading="Home" dataArr={homeData} />

@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -15,7 +15,6 @@ function Sidebar() {
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, height: '100vh', backgroundColor: '#fff' }}
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           variant="permanent"
           sx={{
