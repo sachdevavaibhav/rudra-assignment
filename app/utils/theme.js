@@ -28,6 +28,24 @@ const themeOptions = {
     typography: {
         fontFamily: inter.style.fontFamily,
     },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          '&::-webkit-scrollbar': {
+            width: 6,
+          },
+
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#8A92A6',
+            borderRadius: 6,
+          },
+
+          '&::-webkit-scrollbar-track': {
+            backgroundColor: '#C4CCF8',
+          },
+        }
+      }
+    }
 };
 
 export const theme = createTheme(themeOptions);

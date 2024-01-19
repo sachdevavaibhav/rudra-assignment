@@ -5,6 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Skeleton from "@mui/material/Skeleton";
 
 import useHasMounted from "@/app/hooks/useHasMounted";
 import { useInView } from "react-intersection-observer";
@@ -51,14 +52,11 @@ function DirectorsCard() {
         return null;
     }
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error</p>;
-
     return (
         <Card
             sx={{
                 margin: '1.5rem 3rem',
-                borderRadius: '1rem',
+                borderRadius: '0.5rem',
                 width: '25rem',
                 height: '20rem',
                 overflowY: 'scroll',
@@ -75,7 +73,7 @@ function DirectorsCard() {
             >
                 Directors of Netflix Shows
             </Typography>
-            {data.netflix_shows.map((show, index) => (
+            {data && data.netflix_shows.map((show, index) => (
                 <CardContent
                     key={show.director}
                     sx={{
@@ -89,9 +87,28 @@ function DirectorsCard() {
                 >
                     <Box as="span">{show.director}</Box>
                     <Box as="span" color="text.secondary" >{show.country}</Box>
-                    {loading && <p>Loading...</p>}
                 </CardContent>
             ))}
+            {loading && new Array(8).fill(0).map((_, index) => (
+                <CardContent
+                    key={index}
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        alignItems: 'start',
+                        padding: '0.5rem 1.5rem',
+                    }}
+                >
+                    <Box as="span">
+                        <Skeleton variant="text" width={210} height={60} />
+                    </Box>
+                    <Box as="span" color="text.secondary" >
+                        <Skeleton variant="text" width={210} height={60} />
+                    </Box>
+                </CardContent>
+            ))}
+            {error && <p>Something Went Wrong...</p>}
         </Card>
     );
 };
