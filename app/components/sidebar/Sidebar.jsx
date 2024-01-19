@@ -10,7 +10,7 @@ const drawerWidth = 250;
 function Sidebar() {
 
   return (
-    <Box sx={{ display: 'flex', zIndex: '-10', position: 'fixed', height: '100vh'}}>
+    <Box sx={{ display: 'flex', zIndex: '1', position: 'fixed', height: '100vh'}}>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, height: '100vh', backgroundColor: '#fff' }}
