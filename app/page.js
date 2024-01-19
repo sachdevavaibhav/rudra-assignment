@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 
 import Title from './indexPageComponents/title/Title';
 import ShowsCard from './indexPageComponents/cards/showsCard';
+import DirectorsCard from './indexPageComponents/cards/DirectorsCard';
 import ApolloWrapper from './utils/apollo-client-wrapper';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Title />
       <ApolloWrapper>
         <ShowsCard />
+        <DirectorsCard />
       </ApolloWrapper>
     </Box>
   )

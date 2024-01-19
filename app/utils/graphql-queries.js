@@ -8,3 +8,12 @@ export const GET_SHOWS = gql`
         }
     }
 `;
+
+export const GET_SHOWS_DIRECTORS = gql`
+    query GET_SHOWS_DIRECTORS($limit:Int!, $offset:Int!) {
+        netflix_shows(limit: $limit, offset: $offset, distinct_on: director, where: {country: {_neq: "null"}}) {
+            director
+            country
+        }
+    }
+`;
