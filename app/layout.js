@@ -1,8 +1,7 @@
-import { Inter } from 'next/font/google'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import ThemeRegistry from './utils/ThemeRegistry';
-
-const inter = Inter({ subsets: ['latin'] })
+import Header from './components/header/Header';
+import Sidebar from './components/sidebar/Sidebar';
 
 export const metadata = {
   title: 'Rudra Assignment - Innovation To Keep You Ahead Of The Threat',
@@ -13,13 +12,15 @@ export default function RootLayout({ children }) {
   console.log('RootLayout')
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
           <AppRouterCacheProvider>
             <ThemeRegistry options={{key: 'mui-theme'}}>
+              <Header />
+              <Sidebar />
               {children}
             </ThemeRegistry>
           </AppRouterCacheProvider>
       </body>
     </html>
   )
-}
+};

@@ -7,7 +7,9 @@ import Typography from "@mui/material/Typography";
 
 function Header() {
     return (
-        <Stack direction="row" alignItems="center" backgroundColor="background.paper" justifyContent="space-between" px={3} py={2}>
+        <Stack direction="row" alignItems="center" backgroundColor="background.paper" justifyContent="space-between" px={3} py={2}
+            borderBottom="1px solid #E9ECEF"
+        >
             <Stack direction="row" spacing={4} alignItems="center" width="100%">
                 <Stack direction="row" spacing={1} alignItems="center">
                     <Image src="/logo.svg" alt="logo" width={28} height={28} />
@@ -60,7 +62,7 @@ function Header() {
                 >
                     <Image src="/profile.svg" alt="profile" width={42} height={42} />
                 </Box>
-                <Stack as="div" spacing={1} justifyItems="center" width="10rem" >
+                <Stack justifyItems="center" width="10rem" >
                     <Typography
                         fontWeight={400}
                         fontSize={"1rem"}
@@ -70,7 +72,7 @@ function Header() {
                     </Typography>
                     <Typography
                         fontWeight={400}
-                        fontSize={"0.75rem"}
+                        fontSize={"0.8rem"}
                         color="text.secondary"
                     >
                         Marketing Administrator
