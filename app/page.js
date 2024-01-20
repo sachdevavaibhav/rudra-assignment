@@ -8,6 +8,9 @@ import FavoriteCard from './indexPageComponents/cards/favoriteCard';
 import ConversionCard from './indexPageComponents/cards/conversionCard';
 import PostCard from './indexPageComponents/cards/postCard';
 import IndianShowsCard from './indexPageComponents/cards/indianShowsCard';
+import TotalShowsCard from './indexPageComponents/cards/totalShowsCard';
+import LatestReleaseCard from './indexPageComponents/cards/latestReleaseCard';
+import RatingsCard from './indexPageComponents/cards/ratingCard';
 import ApolloWrapper from './utils/apollo-client-wrapper';
 
 export default function Home() {
@@ -52,10 +55,14 @@ export default function Home() {
           <Grid item xs={3}>
             <IndianShowsCard />
           </Grid>
-          <Grid item xs={3}>
-            <ApolloWrapper>
-              <DirectorsCard />
-            </ApolloWrapper>
+          <Grid item xs={4}>
+            <TotalShowsCard />
+          </Grid>
+          <Grid item xs={4}>
+            <LatestReleaseCard />
+          </Grid>
+          <Grid item xs={4}>
+            <RatingsCard/>
           </Grid>
         </Grid>
     </Box>

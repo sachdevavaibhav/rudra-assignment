@@ -50,3 +50,32 @@ export const GET_INDIAN_SHOWS = gql`
         }
     }
 `;
+
+export const TOTAL_UNIQUE_SHOWS = gql`
+query TOTAL_UNIQUE_SHOWS {
+    netflix_shows_aggregate {
+      aggregate {
+        count(columns: show_id, distinct: true)
+      }
+    }
+  }
+`;
+
+export const LATEST_RELEASE = gql`
+query LATEST_RELEASE {
+    netflix_shows(limit: 2, order_by: {date_added: desc_nulls_last}) {
+      title
+      description
+      date_added
+    }
+  }
+`;
+
+export const SHOW_RATING = gql`
+query SHOW_RATING {
+    netflix_shows(limit: 7) {
+      title
+      rating
+    }
+  }
+`;
