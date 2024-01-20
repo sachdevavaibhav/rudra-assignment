@@ -26,7 +26,7 @@ function DirectorsCard() {
 
     const { loading, error, data, fetchMore } = useQuery(
         GET_SHOWS_DIRECTORS,
-        {variables: { limit: 8, offset: 0 }}
+        {variables: { limit: 10, offset: 0 }}
     );
 
     useEffect(() => {
@@ -57,8 +57,7 @@ function DirectorsCard() {
             sx={{
                 margin: '1.5rem 3rem',
                 borderRadius: '0.5rem',
-                width: '30rem',
-                height: '20rem',
+                height: '25rem',
                 overflowY: 'scroll',
             }}
             ref={cardRef}

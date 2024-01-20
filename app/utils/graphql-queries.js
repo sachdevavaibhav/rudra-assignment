@@ -31,3 +31,22 @@ export const GET_FAVORITE_SHOWS = gql`
         }
     }
 `;
+
+export const GET_SHOW_WITH_DESCRIPTION = gql`
+    query GET_SHOW_WITH_DESCRIPTION {
+        netflix_shows_by_pk(show_id: "s2") {
+            title
+            description
+            duration
+        }
+    }
+`;
+
+export const GET_INDIAN_SHOWS = gql`
+    query GET_INDIAN_SHOWS {
+        netflix_shows(limit: 4, where: {country: {_eq: "India"}}) {
+            title
+            duration
+        }
+    }
+`;

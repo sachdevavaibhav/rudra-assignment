@@ -50,7 +50,6 @@ async function FavoriteCard() {
                 <Image src="/red_smile.svg" alt="red smile" width={45} height={45} />
             </Box>
             <CardContent
-                key={data.title}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
