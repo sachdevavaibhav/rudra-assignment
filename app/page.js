@@ -13,6 +13,8 @@ import LatestReleaseCard from './indexPageComponents/cards/latestReleaseCard';
 import RatingsCard from './indexPageComponents/cards/ratingCard';
 import ApolloWrapper from './utils/apollo-client-wrapper';
 
+import Image from 'next/image';
+
 export default function Home() {
   console.log('Home')
   return (
@@ -65,6 +67,23 @@ export default function Home() {
             <RatingsCard/>
           </Grid>
         </Grid>
+        <Box
+          role="button"
+          sx={{
+            position: 'fixed',
+            top: '40%',
+            right: '5px',
+            backgroundColor: '#E9671A',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '10px',
+            borderRadius: '.5rem',
+            cursor: 'pointer',
+          }}
+        >
+          <Image src="/Setting.svg" alt="settings" width={20} height={20} />
+        </Box>
     </Box>
   )
 }
