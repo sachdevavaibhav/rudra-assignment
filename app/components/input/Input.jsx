@@ -8,6 +8,7 @@ function Input({placeholder, icon, iconPosition="start", ...props}) {
             placeholder={placeholder}
             variant="outlined"
             size="small"
+            fullWidth
             sx={{
                 "& .MuiOutlinedInput-root": {
                     "& fieldset": {
@@ -25,11 +26,16 @@ function Input({placeholder, icon, iconPosition="start", ...props}) {
                 }
             }}
             InputProps={{
-                startAdornment: (
-                    <InputAdornment position={iconPosition}>
+                startAdornment: iconPosition === "start" && (
+                    <InputAdornment position="start">
                         {icon}
                     </InputAdornment>
-                )
+                ),
+                endAdornment: iconPosition === "end" && (
+                    <InputAdornment position="end">
+                        {icon}
+                    </InputAdornment>
+                ),
                 }}
             {...props}
          />

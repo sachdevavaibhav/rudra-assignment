@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Skeleton from "@mui/material/Skeleton";
+import Avatar from "@mui/material/Avatar";
 
 import useHasMounted from "@/app/hooks/useHasMounted";
 import { useInView } from "react-intersection-observer";
@@ -77,16 +78,24 @@ function ShowsCard() {
                 <CardContent
                     key={show.title}
                     sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between',
-                        alignItems: 'start',
                         padding: '0.5rem 1.5rem',
                     }}
                     ref={index === data.netflix_shows.length - 2 ? ref : null}
                 >
-                    <Box as="span">{show.title}</Box>
-                    <Box as="span" color="text.secondary" >{show.release_year}</Box>
+                    <Box display="flex" alignItems="center" gap={2}>
+                        <Avatar alt={show.title} src="/netflix.jpg" sx={{ width: '2.5rem', height: '2.5rem', }} />
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'space-between',
+                                alignItems: 'start',
+                            }}
+                        >
+                            <Box as="span">{show.title}</Box>
+                            <Box as="span" color="text.secondary" >{show.release_year}</Box>
+                        </Box>
+                    </Box>
                     {loading && <p>Loading...</p>}
                 </CardContent>
             ))}
