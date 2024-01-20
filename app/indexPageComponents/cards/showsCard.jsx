@@ -57,7 +57,7 @@ function ShowsCard() {
             sx={{
                 margin: '1.5rem 3rem',
                 borderRadius: '0.5rem',
-                width: '25rem',
+                width: '30rem',
                 height: '20rem',
                 overflowY: 'scroll',
             }}

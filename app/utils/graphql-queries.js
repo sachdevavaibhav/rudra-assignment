@@ -17,3 +17,17 @@ export const GET_SHOWS_DIRECTORS = gql`
         }
     }
 `;
+
+export const GET_FAVORITE_SHOWS = gql`
+    query GET_FAVORITE_SHOW {
+        netflix_shows_by_pk(show_id: "s5") {
+            country
+            description
+            duration
+            title
+            type
+            release_year
+            cast_members
+        }
+    }
+`;
