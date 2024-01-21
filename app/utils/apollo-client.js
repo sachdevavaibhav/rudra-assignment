@@ -7,11 +7,10 @@ function createApolloClient() {
   });
 
   const authLink = setContext((_, { headers }) => {
-    const token = "wTF4eH50ifYMT1H6NAiFnlEZ5ZxoBSzKVE5lJXdW1XvZH6eQraN5rvyC5wG1uLOB";
     return {
       headers: {
         ...headers,
-        "x-hasura-admin-secret": token,
+        "x-hasura-admin-secret": process.env.NEXT_PUBLIC_HASURA_ADMIN_SECRET,
       }
     }
   });
