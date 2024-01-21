@@ -46,24 +46,24 @@ export default function Home() {
           }}
           container
         >
-          <Grid item xs={4}>
+          <Grid item sm={6} lg={4}>
             <ApolloWrapper>
               <DirectorsCard />
             </ApolloWrapper>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item sm={6} lg={5}>
             <PostCard/>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item sm={6} lg={3}>
             <IndianShowsCard />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item sm={6} lg={4}>
             <TotalShowsCard />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item sm={6} lg={4}>
             <LatestReleaseCard />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item sm={6} lg={4}>
             <RatingsCard/>
           </Grid>
         </Grid>
