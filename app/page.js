@@ -16,10 +16,10 @@ import ApolloWrapper from './utils/apollo-client-wrapper';
 import Image from 'next/image';
 
 export default function Home() {
-  console.log('Home')
   return (
     <Box as={"main"}
       paddingLeft="250px"
+      paddingTop="82px"
     >
       <Title />
       <Box position="relative">

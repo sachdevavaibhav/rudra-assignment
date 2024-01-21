@@ -8,6 +8,7 @@ function Input({placeholder, icon, iconPosition="start", ...props}) {
             placeholder={placeholder}
             variant="outlined"
             size="small"
+            width="100%"
             fullWidth
             sx={{
                 "& .MuiOutlinedInput-root": {

@@ -64,7 +64,6 @@ function RenderSidebarContent({heading, dataArr}) {
 
 
 function SidebarContent() {
-    console.log("sidebar content");
     return (
         <Box marginTop="1rem">
             <RenderSidebarContent heading="Home" dataArr={homeData} />
